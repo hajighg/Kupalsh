@@ -18,9 +18,6 @@ module.exports.run = async function({ event }) {
       sender_action: 'typing_on'
     });
 
-
-    await new Promise(resolve => setTimeout(resolve, 500));
-
     await api.graph({
       recipient: { id: event.sender.id },
       sender_action: 'typing_off'
